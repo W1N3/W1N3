@@ -2,7 +2,7 @@ var birth_date = new Date(1997, 9, 23, 4, 32, 0);
 
 var dictionary = {
 	"title": ["Artesão de Software", "Software Artisan"],
-	"first_sentence": ["Tempo vivo :", "Time alived :"],
+	"first_sentence": ["Tempo vivo :", "Time alive :"],
 	"years": [" Anos", " Years"],
 	"months": [" Meses", " Months"],
 	"days": [" Dias", " Days"],
@@ -59,9 +59,8 @@ var dictionary = {
 	"religion_drive" : ["Pasta no google drive sobre religião", "Google drive folder about religion"],
 	"art_drive" : ["Pasta no google drive sobre arte", "Google drive folder about art"],
 	"break_security" : ["Muito PDF sobre computação e segurança", "Break Security"],
-	"musicians_that_i_listen": ["Músicos que eu ouço", "Musicians that I listen"],
-	"movies_and_shows_that_i_saw": ["Séries e Filmes que eu já vi", "TV Shows and Movies that I saw"],
-	"books_already_read_and_to_read": ["Livros que eu já li e pretendo ler", "Books already read and to read"],
+	"musicians_i_listen_to": ["Músicos que eu ouço", "Musicians I listen to"],
+	"books_already_read_and_to_read": ["Livros que eu <span class=\"text-purple\"><i><u>já li</u></i> e <i><u>pretendo ler</u></i></span> (<span class=\"text-blue\"><i><u>lendo</u></i></span>)", "Books <span class=\"text-purple\"><i><u>already read</u></i></span> and <i><u>to read</u></i> (<span class=\"text-blue\"><i><u>reading</u></i></span>)"],
 	"games_that_marked_me": ["Jogos que me marcaram", "Games that marked me"],
 	"computer_science": ["Ciência da Computação","Computer Science"],
 	"history": ["História","History"],
@@ -70,7 +69,7 @@ var dictionary = {
 	"philosophy": ["Filosofia","Philosophy"],
 	"political_economy": ["Economia Política","Political Economy"],
 	"psyche": ["Psicologia"," Psychology"],
-	"map": ["<span class=\"text-blue\"><i><u>Cidades</u></i></span> onde estive, <span class=\"text-purple\"></i><u>escolas</u></i></span> em que estudei, <i><u>lugares</u></i> onde trabalhei",
+	"map": ["<span class=\"text-blue\"><i><u>Cidades</u></i></span> onde estive, <span class=\"text-purple\"><i><u>escolas</u></i></span> em que estudei, <i><u>lugares</u></i> onde trabalhei",
 	"<span class=\"text-blue\"><i><u>Cities</u></i></span> I have been, <span class=\"text-purple\"><i><u>schools</u></i></span> where I studied, <i><u>places</u></i> that I worked"]
 };
 
