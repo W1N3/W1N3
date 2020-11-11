@@ -1,0 +1,137 @@
+/*
+color pallete
+	#ffffff		white
+	#808080		gray
+	#800080		purple
+	#140037		blue
+	#000000		black
+*/
+body {
+	background-image: url('bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
+	background-size: cover;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 21px;
+}
+a {
+	color: #808080;
+}
+
+p {
+	padding-left: 0.3em;
+}
+
+.text-blue {
+	color: #140037;
+}
+
+.text-gray {
+	color: #808080;
+}
+
+.text-purple {
+	color: #800080;
+}
+
+.box {
+	background-color: #000000; 
+	color : #808080;
+	border: 1px solid #800080;
+	border-radius: 0% 25px;
+	padding : 0.7em;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin: 0.3em;
+}
+
+.livros {
+	display: inline;
+	text-align: justify;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.box.back-gray {
+	background-color: #808080;
+}
+
+.fill {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.likish_line {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.tabloid {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.noscript {
+	display: flex;
+	justify-content: center;
+	color: #8B4513;
+	background-color: #C0C0C0;
+	padding: 0.7em;
+}
+
+#language_box {
+	position: fixed;
+	background-color: transparent;
+	top: 10px;
+	right: 10px;
+}
+
+#content {
+	background-color: #000000;
+	background-image: url('bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
+	background-size: cover;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#picture {
+	transform: translateZ(0);
+	border: 0px solid transparent;
+	border-radius: 35% 75%;
+	width: 278px;
+	height: 321px;
+}
+
+#map-container {
+	height: 400px;
+}
+
+@media screen and (max-width : 1000px) {
+	.tabloid {
+		width: 80%;
+	}
+	#picture {
+		width: 222px;
+		height: 257px;
+	}
+}
+
+@media screen and (max-width : 500px) {
+	.tabloid {
+		width: 87%;
+	}
+	#picture {
+		width: 166px;
+		height: 193px;
+	}
+}

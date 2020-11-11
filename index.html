@@ -1,0 +1,251 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="W1N3">
+	<meta name="keywords" content="W1N3, webpage, coverpage">
+	<meta name="author" content="Gabriel Silva">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./leaflet.css">
+	<link rel="stylesheet" href="./ssc.css">
+
+	<script src="./leaflet.js"></script>
+	<script src="./sj.js"></script>
+
+</head>
+<body onload="exuraVita()">
+<!--
+	<noscript>
+		<div class="noscript">
+			<p>enable js dude... all code is open... go there and <a href="./sj.js">read</a>...</p>
+		</div>
+	</noscript>
+-->
+	<div id="content">
+		<div id="language_box">
+			<div id="br" class="box" onclick="changeLanguage(id)">
+				<img alt="Portuguese" src="br.jpg" width=40 height=27></img>
+			</div>
+			<div id="en" class="box back-gray" onclick="changeLanguage(id)">
+				<img alt="English" src="en.jpg" width=40 height=27></img>
+			</div>
+		</div>
+		<img id="picture" src="me.jpg" alt="A picture of me">
+		<div id="name" class="box">Gabriel Silva Pereira</div>
+		<div class="box trans" id="title">Software Artisan</div>
+		<div id="time_alive" class="box fill">
+			<p class="trans" id="first_sentence"></p>
+			<p class="time_alived_value"></p>
+			<p class="trans" id="years"></p>
+			<p class="time_alived_value"></p>
+			<p class="trans" id="months"></p>
+			<p class="time_alived_value"></p>
+			<p class="trans" id="days"></p>
+			<p class="time_alived_value"></p>
+			<p class="trans" id="hours"></p>
+			<p class="time_alived_value"></p>
+			<p class="trans" id="minutes"></p>
+			<p class="time_alived_value"></p>
+			<p class="trans" id="seconds"></p>
+		</div>
+		<div class="box tabloid">
+			<h2 id="curriculum_vitae" class="trans"></h2>
+		</div>
+		<div class="box tabloid">
+			<h2 id="preferences" class="trans"></h2>
+			<div class="box likish_line">
+				<p id="humidity" class="trans"></p><p id="" class="">63%</p>
+			</div>
+			<div class="box likish_line">
+				<p id="temperature" class="trans"></p><p id="" class="">23 ºC</p>
+			</div>
+			<div class="box likish_line">
+				<p id="weather" class="trans"></p><p id="cloudly" class="trans"></p>
+			</div>
+			<div class="box likish_line">
+				<p id="food" class="trans"></p><p>Crepioca</p>
+			</div>
+			<div class="box likish_line">
+				<p id="drink" class="trans"></p><p id="suco_maracuja" class="trans"></p>
+			</div>
+			<div class="box likish_line">
+				<p id="dessert" class="trans"></p><p>Açaí</p>
+			</div>
+			<div class="box likish_line">
+				<p id="alcohol" class="trans"></p><p>Rum</p>
+			</div>
+			<div class="box likish_line">
+				<p id="operating_system" class="trans"></p><p>GNU/Linux</p>
+			</div>
+			<div class="box likish_line">
+				<p id="window_manager" class="trans"></p><p>i3wm</p>
+			</div>
+			<div class="box likish_line">
+				<p id="programming_language" class="trans"></p><p id="c_like" class="trans"></p>
+			</div>
+			<div class="box likish_line">
+				<p id="design_pattern" class="trans"></p><p id="to_discover" class="trans"></p>
+			</div>
+			<div class="box likish_line">
+				<p id="artificial_intelligence" class="trans"></p><p id="genetic_algorithms" class="trans"></p>
+			</div>
+			<div class="box likish_line">
+				<p id="information_security" class="trans"></p><p id="reverse_engineering" class="trans"></p>
+			</div>
+			<div class="box likish_line">
+				<p id="scientific_computing" class="trans"></p><p id="simulations" class="trans"></p>
+			</div>
+			<div class="box likish_line">
+				<p id="networking" class="trans"></p><p>"P2P"</p>
+			</div>
+		</div>
+		<div class="box tabloid">
+			<h2 id="musicians_that_i_listen" class="trans"></h2>
+			<div class="fill">
+				<div class="box"><a href="https://www.caravanpalace.com/">Caravan Palace</a></div>
+				<div class="box"><a href="https://en.wikipedia.org/wiki/Criolo">Criolo</a></div>
+				<div class="box"><a href="http://www.degiheugi.com/">Degiheugi</a></div>
+				<div class="box"><a href="https://www.gorillaz.com/">Gorillaz</a></div>
+				<div class="box"><a href="https://infected-mushroom.com">Infected Mushroom</a></div>
+				<div class="box"><a href="https://www.ironmaiden.com/">Iron Maiden</a></div>
+				<div class="box"><a href="http://jethrotull.com/">Jethro Tull</a></div>
+				<div class="box"><a href="https://www.karmafields.com/">Karma Fields</a></div>
+				<div class="box"><a href="http://vinter.us/">Savant</a></div>
+				<div class="box"><a href="http://solarfields.com/">Solar Fields</a></div>
+				<div class="box"><a href="https://soundcloud.com/stellardrone">Stellardrone</a></div>
+				<div class="box"><a href="https://www.yanntiersen.com/">Yann Tiersen</a></div>
+			</div>
+		</div>
+		<div class="box tabloid">
+			<h2 id="games_that_marked_me" class="trans"></h2>
+			<div class="fill">
+				<div class="box"><a href="https://en.wikipedia.org/wiki/Duke_Nukem_3D">Duke Nukem 3D</a></div>
+				<div class="box"><a href="https://en.wikipedia.org/wiki/Donkey_Kong_Country">Donkey Kong Country</a></div>
+				<div class="box"><a href="https://en.wikipedia.org/wiki/Super_Bomberman">Super Bomberman</a></div>
+				<div class="box"><a href="https://en.wikipedia.org/wiki/Gruntz">Gruntz</a></div>
+				<div class="box"><a href="https://store.steampowered.com/app/579020/Constructor/">Constructor</a></div>
+				<div class="box"><a href="https://en.wikipedia.org/wiki/Crash_Bandicoot">Crash Bandicoot</a></div>
+				<div class="box"><a href="https://www.rockstargames.com/bully/">Bully</a></div>
+				<div class="box"><a href="https://en.wikipedia.org/wiki/Warcraft">Warcraft</a></div>
+				<div class="box"><a href="https://en.wikipedia.org/wiki/Diablo_(series)">Diablo II</a></div>
+				<div class="box"><a href="https://www.eudemons.com/index/">Eudemons Online</a></div>
+				<div class="box"><a href="https://en.wikipedia.org/wiki/SimCity">Sim City</a></div>
+				<div class="box"><a href="https://www.riseofnations.com/">Rise of Nations</a></div>
+				<div class="box"><a href="https://en.wikipedia.org/wiki/Civilization_(series)">Sid Meier's Civilization IV</a></div>
+				<div class="box"><a href="https://en.wikipedia.org/wiki/Defense_of_the_Ancients">DotA</a></div>
+				<div class="box"><a href="http://www.shiningrocksoftware.com/game/">Banished</a></div>
+				<div class="box"><a href="https://www.unrealworld.fi/">UnReal World</a></div>
+				<div class="box"><a href="https://www.stardewvalley.net/">Stardew Valley</a></div>
+			</div>
+		</div>
+		<div class="box tabloid">
+			<h2 id="books_already_read_and_to_read" class="trans"></h2>
+			
+			<h4 id="computer_science" class="trans"></h4>
+
+			<div class="livros text-blue">Algorithms to live by : The computer science of human decisions - Brian Christian & Tom Griffiths</div>
+			<div class="livros">Digital Minimalism : Choosing a focused life in a noisy world - Cal Newport</div>
+			<div class="livros">Domain Driven Design - : Tackling complexity in the hearth of software - Eric Evans</div>
+			<div class="livros text-purple">Homesteading the Noosphere - Eric. S. Raymond</div>
+			<div class="livros">Refactoring : Improving the design of existing code - Martin Fowler</div>
+			<div class="livros">Obfuscation : A user's guide for privacy and protest - Finn Brunton & Helen Nissenbaum</div>
+			<div class="livros">Reversing : Secrets of reverse engineering - Eldad Eilam</div>
+			<div class="livros">Clean code : A handbook of agile software craftsmanship - Robert C. Martin</div>
+			<div class="livros">The art of computer programming : Vol 1. Fundamental algorithms - Donald E. Knuth</div>
+			<div class="livros">The art of computer programming : Vol 2. Seminumerical algoritms - Donald E. Knuth</div>
+			<div class="livros">The art of computer programming : Vol 3. Sorting and searching - Donald E. Knuth</div>
+			<div class="livros">The art of computer programming : Vol 4A. Combinatorial algorithms - Donald E. Knuth</div>
+			<div class="livros">The fourth revolution : How the infosphere is reshaping reality - Luciano Floridi.pdf</div>
+			<div class="livros">Working effectively with legacy code - Michael C. Feathers</div>
+			<div class="livros">World without mind : The existencial threat of big tech - Franklin Foer</div>
+
+			<h4 id="history" class="trans"></h4>
+
+			<div class="livros">Debt : the first 5000 years - David Graeber</div>
+			<div class="livros">História da bruxaria - Jeffrey Russell & Brooks Alexander</div>
+			<div class="livros">Social origins of dictatorship and democracy : Lord and peasant in the making of the modern world - Barrington Moore Jr.</div>
+
+			<h4 id="literature" class="trans"></h4>
+
+			<div class="livros text-purple">Fortaleza Digital - Dan Brown</div>
+			<div class="livros">I Robot - Isaac Asimov</div>
+			<div class="livros">Madame Bovary - Gustave Flaubert</div>
+			<div class="livros text-purple">Viagem ao centro da terra - Julio Verne</div>
+			<div class="livros text-purple">A mãe - Maxim Gorki</div>
+			<div class="livros text-purple">Viagens de gulliver - Jonathan Swift</div>
+
+			<h4 id="math_and_physics" class="trans"></h4>
+
+			<div class="livros">A = B - Marko Petkovsek & Herbert S. Wilf & Doron Zeilberger</div>
+			<div class="livros">Concrete mathematics - Ronald L. Graham & Donald E. Knuth & Oren Patashnik</div>
+			<div class="livros text-purple">Física 1 : Mecânica - Young & Freedman</div>
+			<div class="livros">Física 2 : Termodinâmica e ondas - Young & Freedman</div>
+			<div class="livros text-purple">Física 3 : Eletromagnetismo - Young & Freedman</div>
+			<div class="livros">Física 4 : Ótica e física moderna - Young & Freedman</div>
+			<div class="livros">generatingfunctionology - Herbert S. Wilf</div>
+
+			<h4 id="philosophy" class="trans"></h4>
+
+			<div class="livros">A critique of reason - Luke Smith</div>
+			<div class="livros">Essentialism : The disciplined pursuit of less - Greg McKeown</div>
+			<div class="livros">In praise of idleness and other essays - Bertrand Russel</div>
+			<div class="livros">Industrial society and its future - Theodore Kaczynski</div>
+			<div class="livros text-purple">O mundo de sofia - Jostein Gaarder</div>
+			<div class="livros text-purple">Ten arguments for deleting your social media - Jaron Lanier</div>
+			<div class="livros text-purple">Who owns the future - Jaron Lanier</div>
+
+			<h4 id="political_economy" class="trans"></h4>
+
+			<div class="livros">A conquista do pão - Piotr Kropotkin</div>
+			<div class="livros">A loucura da razão econômica : Marx e o capital no século XXI - David Harvey</div>
+			<div class="livros">Animal spirits : How humans psychology drives the economy and why it matters for global capitalism - George A. Akerlof & Robert J. Shiller</div>
+			<div class="livros">Good to great : Why some companies make the leap... and others don't - Jim Collins</div>
+			<div class="livros">O privilegio da servidão : O novo proletariado de serviços na era digital - Ricardo Antunes</div>
+			<div class="livros">The big short : Inside the doomsday machine - Michael Lewis</div>
+			<div class="livros">Towards a new socialism - W. Paul Cockshott & Allin Cottrell</div>
+
+			<h4 id="psyche" class="trans"></h4>
+
+			<div class="livros">Animals and psychedelics : The natural world and the instinct to alter consciousness - Giorgio Samorini</div>
+			<div class="livros">Behave : The biology of humans at our best and worst - Robert M. Sapolsky</div>
+			<div class="livros text-purple">Emotional first aid : Practical strategies for treating failure, rejection, guilt, and other everyday psychological injuries - Guy Winch</div>
+			<div class="livros">How to talk so kids will listen & Listen so kids will talk - Adele Faber & Elaine Mazlish</div>
+			<div class="livros text-purple">Loneliness : Human nature and the need for social connection - John T. Cacioppo & William Patrick</div>
+			<div class="livros">O corpo fala - Pierre Weil & Roland Tompakow</div>
+			<div class="livros">Why zebras don't get ulcers - Robert M. Sapolsky</div>			
+		</div>
+		<div class="box tabloid">
+			<h2 id="random_interesting_stuffs" class="trans"></h2>
+			<a href="https://api.whatsapp.com/send?phone=" id="whatsapp_dm_without_contact_saving" class="trans"></a>
+			<a href="https://theuselessweb.site/" id="useless_web" class="trans"></a>
+			<a href="https://inumeraveis.com.br/" id="innumerables" class="trans"></a>
+			<a href="https://www.worldometers.info/coronavirus/" id="covid19" class="trans"></a>
+			<a href="https://typing-speed-test.aoeu.eu/" id="typing_aoeu" class="trans"></a>
+			<a href="https://www.monroecc.edu/faculty/paulseeburger/calcnsf/CalcPlot3D/" id="calc_plot_3d" class="trans"></a>
+			<a href="https://www.desmos.com/calculator" id="desmos_graphs" class="trans"></a>
+			<a href="https://www.wordnik.com/" id="wordnik" class="trans"></a>
+			<a href="https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/index.html" id="nick_szabo" class="trans"></a>
+			<a href="https://xkcd.com/" id="xkcd" class="trans"></a>
+			<a href="https://missing.csail.mit.edu/" id=""></a>
+			<a href="http://lazyfoo.net/" id="missing_cs" class="trans"></a>
+			<a href="https://gist.github.com/onlurking/fc5c81d18cfce9ff81bc968a7f342fb1" id="theory_building" class="trans"></a>
+			<a href="http://www.shatteredsoulstone.com/" id="shattered_soulstone" class="trans"></a>
+			<a href="https://www.codeproject.com/Articles/704865/Salted-Password-Hashing-Doing-it-Right" id="salted_hashing" class="trans"></a>
+			<a href="https://www.tarsnap.com/" id="tarnsap" class="trans"></a>
+			<a href="https://b-ok.lat/" id="boklat" class="trans"></a>
+			<a href="https://opensource.com/article/20/5/systemd-startup" id="systemd_startup" class="trans"></a>
+			<a href="https://bash.cyberciti.biz/guide/Main_Page" id="shell_wiki" class="trans"></a>
+			<a href="http://cb.vu/unixtoolbox.xhtml" id="unix_toolbox" class="trans"></a>
+			<a href="https://catonmat.net/" id="catonmat" class="trans"></a>
+			<a href="http://manifesto.softwarecraftsmanship.org/" id="softwarecraftsmanship" class="trans"></a>
+			<a href="https://anchor.fm/refatorandocast" id="refatorando_cast" class="trans"></a>
+			<a href="https://drive.google.com/drive/u/0/folders/1XCz3Rln9kqpfAnZNCOj5gf2MGXCODNVa?fbclid=IwAR3AUsoAEG1IKhyNuz4YBrmF-_8RNdx1A2Aqs3IApRZCcwaZsxI6iJNCS1U" id="religion_drive" class="trans"></a>
+			<a href="https://drive.google.com/drive/folders/1Nle_YvhU7PtCv_e9KL7CmWvijK6KGBmr?fbclid=IwAR08mb4P1I4kGHqCKo-tE0iLB84UYRLjrSqNHqmDYr-62L5NNI3HsUUbOEA" id="art_drive" class="trans"></a>
+			<a href="https://mega.nz/folder/dA0RGLJQ#w3MIfnpUEXoRTaTufoFz_Q/folder/Jd9mWBJY" id="break_security" class="trans"></a>
+		</div>
+		<div class="box tabloid">
+			<h2 id="map" class="trans"></h2>
+			<div id="map-container"></div>
+		</div>
+	</div>
+</body>
+</html>
