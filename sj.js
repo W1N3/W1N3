@@ -94,29 +94,29 @@ function exuraVita() {
 	}).addTo(map_dots);
 
 	var icone_visitas = L.icon({
-			iconUrl: './images/marker-blue.png',
+			iconUrl: './leaflet/images/marker-blue.png',
 			iconSize: [25, 41],
 			iconAnchor: [12, 41],
 			popupAnchor: [1, -34],
-			shadowUrl: "./images/marker-shadow.png",
+			shadowUrl: "./leaflet/images/marker-shadow.png",
 			shadowSize: [41, 41],
 			tooltipAnchor: [16, -28]
 	});
 	var icone_escolas = L.icon({
-			iconUrl: './images/marker-purple.png',
+			iconUrl: './leaflet/images/marker-purple.png',
 			iconSize: [25, 41],
 			iconAnchor: [12, 41],
 			popupAnchor: [1, -34],
-			shadowUrl: "./images/marker-shadow.png",
+			shadowUrl: "./leaflet/images/marker-shadow.png",
 			shadowSize: [41, 41],
 			tooltipAnchor: [16, -28]
 	});
 	var icone_trabalhos = L.icon({
-			iconUrl: './images/marker-gray.png',
+			iconUrl: './leaflet/images/marker-gray.png',
 			iconSize: [25, 41],
 			iconAnchor: [12, 41],
 			popupAnchor: [1, -34],
-			shadowUrl: "./images/marker-shadow.png",
+			shadowUrl: "./leaflet/images/marker-shadow.png",
 			shadowSize: [41, 41],
 			tooltipAnchor: [16, -28]
 	});
