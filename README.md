@@ -7,7 +7,7 @@ To be an presentation page with not just coding, programmming, professional info
 ### Contains
 
 * A picture of me
-* Time alived (with hours offset to be corrected)
+* Time alive (with hours offset to be corrected)
 * Resume
 * Preferences
 * Musicians
