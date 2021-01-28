@@ -190,7 +190,7 @@ function countLifeTime() {
 			60*1000, // minute by ms
 			1000 // second by ms
 		];
-	var time_alived_boxes = document.getElementsByClassName('time_alived_value');
+	var time_alive_boxes = document.getElementsByClassName('time_alive_value');
 	var days_to_add = 0;
 	var i;
 	
@@ -214,7 +214,7 @@ function countLifeTime() {
 	*/
 	for(i = 0 ; i <  tick_alived.length ; i++) {
 		tick_alived[i] = Math.floor(ms_alived / divisors[i]);
-		time_alived_boxes[i].innerHTML = tick_alived[i];
+		time_alive_boxes[i].innerHTML = tick_alived[i];
 		if(!i) {
 			ms_alived = ms_alived - days_to_add*divisors[2];
 		}
