@@ -25,7 +25,7 @@ var dictionary = {
 	"c_like": ["\"tipo C\"", "C-like"],
 	"design_pattern": ["Padrão de Projeto", "Design Pattern"],
 	"to_discover": ["~a descobrir~", "~to discover~"],
-	"artificial_intelligence" : ["Inteligência Artifical", "Aritificial Intelligence"],
+	"artificial_intelligence" : ["Inteligência Artifical", "Artificial Intelligence"],
 	"genetic_algorithms": ["Algoritmo Genético", "Genetic Algorithms"],
 	"information_security": ["Segurança da Informação", "Information Security"],
 	"reverse_engineering": ["Engenharia Reversa", "Reverse Engineering"],
@@ -34,7 +34,6 @@ var dictionary = {
 	"networking": ["Redes de Computadores", "Computers Networking"],
 	"curriculum_vitae": ["<a href='./curriculo.pdf'>Currículo</a>", "<a href='./resume.pdf'>Resume</a>"],
 	"random_interesting_stuffs": ["Coisas interessantes e aleatórias", "Random interesting stuffs"],
-	"whatsapp_dm_without_contact_saving": ["Mandar mensagem pro wpp sem salvar o contato", "Send Whatsapp message without saving the contact"],
 	"useless_web" : ["'Sites inúteis'", "The usuless web"],
 	"innumerables" : ["Inumeráveis (Vítimas da COVID-19)", "Innumerables (COVID-19 victims)"],
 	"covid19" : ["Covidômetro", "Covidometer"],
@@ -44,7 +43,8 @@ var dictionary = {
 	"wordnik" : ["Dicionário de Inglês", "Dictionary"],
 	"nick_szabo" : ["Artigos interessantes de Nick Szabo", "Nick Szabo interesting articles"],
 	"xkcd" : ["Tirinhas XKCD", "XKCD Comics"],
-	"missing_cs" : ["O semestre perdido do curso de Ciência da computação", "The Missing semester of CS education"],
+  "missing_cs" : ["O semestre perdido do curso de Ciência da computação", "The Missing semester of CS education"],
+  "lazy_foo" : ["Lazy Foo (Introdução ao OpenGL)", "Lazy Foo (Intro to OpenGL)"],
 	"theory_building" : ["Programação como construção teórica", "Programming as Theory Building"],
 	"shattered_soulstone" : ["Podcast sobre Diablo III", "Shattered Soulstone (Diablo III)"],
 	"salted_hashing" : ["Salgando senhas embaralhadas de maneira correta", "Salted Password Hashing Doing it Right"],
@@ -60,7 +60,7 @@ var dictionary = {
 	"art_drive" : ["Pasta no google drive sobre arte", "Google drive folder about art"],
 	"break_security" : ["Muito PDF sobre computação e segurança", "Break Security"],
 	"musicians_i_listen_to": ["Músicos que eu ouço", "Musicians I listen to"],
-	"books_already_read_and_to_read": ["Livros que eu <span class=\"text-purple\"><i><u>já li</u></i> e <i><u>pretendo ler</u></i></span> (<span class=\"text-blue\"><i><u>lendo</u></i></span>)", "Books <span class=\"text-purple\"><i><u>already read</u></i></span> and <i><u>to read</u></i> (<span class=\"text-blue\"><i><u>reading</u></i></span>)"],
+	"books_already_read_and_to_read": ["Livros que eu <span class=\"text-purple\"><i><u>já li</u></i></span> e <i><u>pretendo ler</u></i> (<span class=\"text-blue\"><i><u>lendo</u></i></span>)", "Books <span class=\"text-purple\"><i><u>already read</u></i></span> and <i><u>to read</u></i> (<span class=\"text-blue\"><i><u>reading</u></i></span>)"],
 	"games_that_marked_me": ["Jogos que me marcaram", "Games that marked me"],
 	"computer_science": ["Ciência da Computação","Computer Science"],
 	"history": ["História","History"],
@@ -180,8 +180,8 @@ function changeLanguage(id) {
 
 function countLifeTime() {
 	var now = new Date();
-	var ms_alived = now.getTime() - birth_date.getTime();
-	var tick_alived = [0, 0, 0, 0, 0, 0];
+	var ms_alive = now.getTime() - birth_date.getTime();
+	var tick_alive = [0, 0, 0, 0, 0, 0];
 	var divisors = [
 			365*24*60*60*1000, // year by ms
 			30*24*60*60*1000, // month by ms
@@ -212,12 +212,12 @@ function countLifeTime() {
 	/*
 		Something is wrong on datetime counting in a offset about hour in this fucked up calendar
 	*/
-	for(i = 0 ; i <  tick_alived.length ; i++) {
-		tick_alived[i] = Math.floor(ms_alived / divisors[i]);
-		time_alive_boxes[i].innerHTML = tick_alived[i];
+	for(i = 0 ; i <  tick_alive.length ; i++) {
+		tick_alive[i] = Math.floor(ms_alive / divisors[i]);
+		time_alive_boxes[i].innerHTML = tick_alive[i];
 		if(!i) {
-			ms_alived = ms_alived - days_to_add*divisors[2];
+			ms_alive = ms_alive - days_to_add*divisors[2];
 		}
-		ms_alived = ms_alived - tick_alived[i]*divisors[i];
+		ms_alive = ms_alive - tick_alive[i]*divisors[i];
 	}
 }
