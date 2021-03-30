@@ -1,5 +1,3 @@
-var birth_date = new Date(1997, 9, 23, 4, 32, 0);
-
 var dictionary = {
 	"title": ["Artesão de Software", "Software Artisan"],
 	"first_sentence": ["Tempo vivo :", "Time alive :"],
@@ -72,6 +70,8 @@ var dictionary = {
 	"map": ["<span class=\"text-blue\"><i><u>Cidades</u></i></span> onde estive, <span class=\"text-purple\"><i><u>escolas</u></i></span> em que estudei, <i><u>lugares</u></i> onde trabalhei",
 	"<span class=\"text-blue\"><i><u>Cities</u></i></span> I have been, <span class=\"text-purple\"><i><u>schools</u></i></span> where I studied, <i><u>places</u></i> that I worked"]
 };
+
+var birth_date = new Date(1997, 9, 23, 4, 32, 0);
 
 function exuraVita() {
 	var i;
@@ -179,45 +179,63 @@ function changeLanguage(id) {
 }
 
 function countLifeTime() {
-	var now = new Date();
-	var ms_alive = now.getTime() - birth_date.getTime();
-	var tick_alive = [0, 0, 0, 0, 0, 0];
-	var divisors = [
-			365*24*60*60*1000, // year by ms
-			30*24*60*60*1000, // month by ms
-			24*60*60*1000, // day by ms
-			60*60*1000, // hour by ms
-			60*1000, // minute by ms
-			1000 // second by ms
-		];
-	var time_alive_boxes = document.getElementsByClassName('time_alive_value');
-	var days_to_add = 0;
-	var i;
-	
-	/*
-		to cont the extra day on bissext years
-			if (year is not divisible by 4) then (it is a common year)
-			else if (year is not divisible by 25) then (it is a leap year)
-			else if (year is not divisible by 16) then (it is a common year)
-			else (it is a leap year)
-	*/
-	for(i = birth_date.getFullYear() ; i <= now.getFullYear() ; i++) {
-		if(i % 4 == 0 && i % 25 != 0) {
-			days_to_add++;
-		}
-		else if(i % 16 == 0) {
-			days_to_add++;
-		}
-	}
-	/*
-		Something is wrong on datetime counting in a offset about hour in this fucked up calendar
-	*/
-	for(i = 0 ; i <  tick_alive.length ; i++) {
-		tick_alive[i] = Math.floor(ms_alive / divisors[i]);
-		time_alive_boxes[i].innerHTML = tick_alive[i];
-		if(!i) {
-			ms_alive = ms_alive - days_to_add*divisors[2];
-		}
-		ms_alive = ms_alive - tick_alive[i]*divisors[i];
-	}
+  var now = new Date();
+  var month_size;
+  var time_unit = [0,0,0,0,0,0];
+  var time_alive_boxes = document.getElementsByClassName('time_alive_value');
+  var time_alive_texts = document.getElementsByClassName('time_alive_text');
+  var i;
+
+  month_size = now.getMonth();
+  if(month_size == 0 || month_size == 1 || month_size == 3 || month_size == 5 || month_size == 7 || month_size == 8 || month_size == 10) {
+    month_size = 30;
+  }
+  else if(month_size == 2) {
+    month_size = 28;
+  }
+  else {
+    month_size = 31;
+  }
+
+  time_unit[0] = now.getFullYear() - birth_date.getFullYear();
+  time_unit[1] = now.getMonth() - birth_date.getMonth();
+  if(time_unit[1] < 0) {
+    time_unit[1] = 12 + time_unit[1];
+    time_unit[0]--;
+  }
+  time_unit[2] = now.getDate() - birth_date.getDate();
+  if(time_unit[2] < 0) {
+    time_unit[2] = month_size;
+    time_unit[1]--;
+  }
+  time_unit[3] = now.getHours() - birth_date.getHours();
+  if(time_unit[3] < 0) {
+    time_unit[3] = 24 + time_unit[3];
+    time_unit[2]--;
+    if(time_unit[2] < 0) {
+      time_unit[2] = month_size + days;
+      time_unit[1]--;
+    }
+  }
+  time_unit[4] = now.getMinutes() - birth_date.getMinutes();
+  if(time_unit[4] < 0) {
+    time_unit[4] = 60 + time_unit[4];
+    time_unit[3]--;
+  }
+  time_unit[5] = now.getSeconds() - birth_date.getSeconds();
+  if(time_unit[5] < 0) {
+    time_unit[5] = 60 + time_unit[5];
+    time_unit[4]--;
+  }
+  for(i = 0 ; i < time_unit.length ; i++) {
+    if(!time_unit[i]) {
+      time_alive_texts[i].style = 'display:none';
+      time_alive_boxes[i].style = 'display:none';
+    }
+    else {
+      time_alive_texts[i].style = 'display';
+      time_alive_boxes[i].style = 'display';
+      time_alive_boxes[i].innerHTML = time_unit[i];
+    }
+  }
 }
